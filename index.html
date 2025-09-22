@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY DESIGNS SHOWCASE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: white;
+            border-radius: 50px;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #6a11cb;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #2575fc;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            -webkit-background-clip:text ; 
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .design-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .design-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .design-img {
+            height: 200px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .design-content {
+            padding: 20px;
+        }
+        
+        .design-content h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .design-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .design-tags {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .services {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+        
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .service {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .service i {
+            font-size: 2.5rem;
+            color: #6a11cb;
+            margin-bottom: 20px;
+        }
+        
+        .service h3 {
+            margin-bottom: 15px;
+        }
+        
+        .testimonials {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            padding: 50px 0;
+            border-radius: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .testimonial p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial .author {
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #6a11cb;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .services {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">STAY WICKED HUB</div>
+            <div class="tagline">Biggest 🎱got some 99 Ideas🤑</div>
+        </div>
+    </header>
+     <div class="container">
+        <nav>
+             <ul style="font-style: normal; font-family: 'Times New Roman', Times, serif;font-size: 22px;"><b>
+             <li>If you want to be a good and beneficiary Designer</li>
+            <li>Then you're at the right place for good perfection </li></b>
+          <a href="#" class="btn">Subscribe!</a> 
+     </ul>
+        </nav>
+         <section class="hero">
+            <h1>Showcasing My hand-made Designs</h1>
+            <p>Explore our innovative designs that transform ideas into visually stunning experiences.</p>
+            <a href="#" class="btn">View Portfolio</a>
+            <a href="#" class="btn" style="background: linear-gradient(to right, #ff416c, #ff4b2b);">Contact Us</a>
+        </section>
+
+     <section class="gallery">
+            <div class="design-card">
+                <div class="design-img">My first art of work</div>
+                <div class="design-content">
+                    <h3>For Eco-Branding of Logo's</h3>
+                    <p>I made my first design out of my creativity to be temporarily used as a logo in publishing an art work mainly 'Stay Wicked' which is a Ghanaian Brand of Marketing Tote Bags and T-shirts </p>
+                    <div class="design-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Packaging</span>
+                        <span class="tag">Print</span>
+                        <span class="tag">Template</span>
+                         <span class="tag">Illustration</span>
+                        <span class="tag">Character</span>
+                        <span class="tag">Digital Art</span>
+                    </div>
+                </div>
+            </div>
+                <div class="design-card">
+                <div class="design-img">Print Designs and Illustrustions</div>
+                <div class="design-content">
+                    <h3>Made by Paint Application</h3>
+                    <p>I enhanced my skills to create Modern, responsive website design for a technology startup with focus on user experience and a Series of custom illustrations for children's book with consistent character Editorial design for travel magazine featuring innovative layout and typography</p>
+                    <div class="design-tags">
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Web</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">Editorial</span>
+                        <span class="tag">Typography</span>
+                        <span class="tag">Layout</span>
+                    </div>
+                </div>
+            </div>
+              <div class="design-card">
+                <div class="design-img">App Design and Packaging</div>
+                <div class="design-content">
+                    <h3>Fitness App UI and Craft Beer Packaging</h3>
+                    <p>I therefore extended my innovations in developing a Mobile application interface design for a fitness tracking app with intuitive navigation and an Eye-catching packaging design for craft beer brand with unique label illustrations.</p>
+                    <div class="design-tags">
+                        <span class="tag">Mobile</span>
+                        <span class="tag">UI</span>
+                        <span class="tag">Prototype</span>
+                        <span class="tag">Packaging</span>
+                        <span class="tag">Illustration</span>
+                        <span class="tag">Print</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <section class="services">
+            <h2>Our Design Samples</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>Brand Identity</h3>
+                    <img src="image.jpg">
+                </div>
+                
+                <div class="service">
+                    <h3>Web Design</h3>
+                    <img src="image1.jpg">
+                </div>
+                
+                <div class="service">
+                    <h3>App Design</h3>
+                    <img src="image2.jpg">
+                </div>
+                
+                <div class="service">
+                    <h3>Illustration</h3>
+                    <img src="image5.jpg">
+                </div>
+
+                <div class="service">
+                   <h3>Programming</h3>
+                   <img src="image7.jpg">      
+            </div>
+                <div class="service">
+                <h3>Packaging</h3>
+                <img src="image3.jpg">
+                </div>
+        </div>
+        
+        <section class="testimonials">
+            <h2>What Our viewers Say</h2>
+            <div class="testimonial">
+                <p>"Your massive designs exceeded our expectations. They captured our vision perfectly and delivered a stunning brand identity that truly represents your creativity."</p>
+                <div class="author">
+                    <ul>Founder: Roderick Twum</ul>
+                    <ul>Occupation: Developer</ul>
+                    </div>
+                <textarea placeholder="Kindly provide your Feedback"></textarea>
+
+                <button style="border: #ff416c;"><b>Send</b></button>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="twumasiankrah@icloud.com">Email</a>
+                <a href=" +233206228378"> Contact</a>
+                <a href="Central,Ghana">Address</a>
+            </div>
+            <p>&copy; 2025 DesignShowcase. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                
